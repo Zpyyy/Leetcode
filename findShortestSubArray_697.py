@@ -29,16 +29,26 @@ def findShortestSubArray(nums):
             dic[i] += 1
         else:
             dic[i] = 1
-    m = max(dic.values())
-    for key, value in m.items():
-        if (value == max(m.values())):
-            break
-    for index in range(len(nums)):
-        if nums[index] == key:
-            i = index
-            break
-    for index in range(len(nums),-1,-1):
-        if nums[index] == key:
-            j = index
-            break
-    return j-i
+
+    print(dic)
+    temp = []
+    length = []
+    for key, value in dic.items():
+        if (value == max(dic.values())):
+            temp.append(key)
+    for temp_key in temp:
+        for index in range(len(nums)):
+            if nums[index] == temp_key:
+                i = index
+                break
+        for index in range(len(nums)-1,-1,-1):
+            if nums[index] == temp_key:
+                j = index
+                break
+        length.append(j-i+1)
+
+    return min(length)
+
+
+if __name__ == '__main__':
+    print(findShortestSubArray( [1, 2, 3, 4, 5]))
