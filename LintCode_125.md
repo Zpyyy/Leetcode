@@ -77,5 +77,5 @@
    - 计算前1个物品拼出各种重量的最大价值：f[1]\[0],f[1]\[1],...f[1]\[M]
    - 答案：$\max \limits_{0\leq j \leq M} \{f[N][j] \mid  f[N][j] \neq -1 \}$
 
-
+http://image.hw3static.com/hi/staticimages/hi3msg/images/2018/0524/10/5b0622ec4a479.jpg
 
